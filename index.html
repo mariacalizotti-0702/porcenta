@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentagem - Juros Simples e Compostos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Porcentagem</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Juros Simples -->
+        <div class="coluna">
+            <h2>Juros Simples</h2>
+            <p>O juros simples é calculado sempre sobre o valor inicial (capital), sem considerar os juros acumulados ao longo do tempo. Isso faz com que o valor dos juros cresça de forma linear, ou seja, constante a cada período. Fórmula:</p>
+            <p><strong>J = C × i × t</strong></p>
+            <ul>
+                <li>J = juros</li>
+                <li>C = capital inicial</li>
+                <li>i = taxa de juros (em decimal)</li>
+                <li>t = tempo</li>
+            </ul>
+
+            <h3>Vídeo Aula:</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aZcETuhXxPw?si=QAdJXEWmPb_I8q9R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h3>Exercícios:</h3>
+            <ul>
+                <li>1) Calcule o juros simples de R$ 1.000,00 por 5 meses com taxa de 2% ao mês.</li>
+                <li>2) Qual será o montante final?</li>
+                <li>3) Se um capital rende R$ 300,00 em 10 meses, qual foi o capital inicial?</li>
+            </ul>
+
+            <textarea placeholder="Digite suas respostas aqui..."></textarea>
+            <button onclick="mostrarRespostas('respostaSimples')">Enviar Respostas</button>
+            <div class="resposta" id="respostaSimples" style="display:none;">
+                <h4>Respostas:</h4>
+                <ul>
+                    <li>1) J = 1000 × 0,02 × 5 = <strong>R$ 100,00</strong></li>
+                    <li>2) Montante = 1000 + 100 = <strong>R$ 1.100,00</strong></li>
+                    <li>3) C = 300 ÷ (0,03 × 10) = <strong>R$ 1.000,00</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Juros Compostos -->
+        <div class="coluna">
+            <h2>Juros Compostos</h2>
+            <p>Juros compostos são aqueles em que os juros são calculados sobre o valor inicial (capital) e também sobre os juros acumulados em períodos anteriores. Por isso, ele cresce mais rapidamente ao longo do tempo, sendo chamado de “juros sobre juros”. Esse tipo de cálculo é muito utilizado em investimentos, financiamentos e empréstimos. Fórmula:</p>
+            <p><strong>M = C × (1 + i)<sup>t</sup></strong></p>
+            <ul>
+                <li>M = montante final</li>
+                <li>C = capital inicial</li>
+                <li>i = taxa de juros (em decimal)</li>
+                <li>t = tempo</li>
+            </ul>
+
+            <h3>Vídeo Aula:</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/X652ApXFTJA?si=FAiJQqXt9OIuKyx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h3>Exercícios:</h3>
+            <ul>
+                <li>1) Quanto rende um capital de R$ 500,00 por 3 meses com taxa de 5% ao mês?</li>
+                <li>2) Qual será o montante final?</li>
+                <li>3) Se o montante final foi de R$ 1.200,00 após 2 anos com juros compostos, qual foi o capital aplicado?</li>
+            </ul>
+
+            <textarea placeholder="Digite suas respostas aqui..."></textarea>
+            <button onclick="mostrarRespostas('respostaCompostos')">Enviar Respostas</button>
+            <div class="resposta" id="respostaCompostos" style="display:none;">
+                <h4>Respostas:</h4>
+                <ul>
+                    <li>1) M = 500 × (1 + 0,05)<sup>3</sup> = 500 × 1,1576 ≈ <strong>R$ 578,80</strong></li>
+                    <li>2) Montante ≈ <strong>R$ 578,80</strong></li>
+                    <li>3) C = 1200 ÷ (1 + 0,1)<sup>2</sup> = 1200 ÷ 1,21 ≈ <strong>R$ 991,74</strong></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 - Educação Financeira Interativa
+    </footer>
+
+    <script>
+        function mostrarRespostas(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
