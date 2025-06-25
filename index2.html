@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Matemática</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="center-circle">
+    <img src="circulo.jpg" alt="Imagem central">
+    <div class="circle-text" id="texto-animado">Porcentagem</div>
+  </div>
+
+  <div class="loading-container">
+    <div class="loading-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <p class="loading-text">Carregando...</p>
+  </div>
+
+  <script>
+  
+    let progress = document.getElementById("progress");
+    let width = 0;
+
+    let interval = setInterval(() => {
+      if (width >= 100) {
+        clearInterval(interval);
+        window.location.href = "https://mariacalizotti-0702.github.io/porcenta/"; 
+      } else {
+        width++;
+        progress.style.width = width + "%";
+      }
+    }, 40);
+
+    const textos = ["Porcentagem", "Juros Simples", "Juros Compostos"];
+    const textoElemento = document.getElementById("texto-animado");
+    let indice = 0;
+
+    setInterval(() => {
+      indice = (indice + 1) % textos.length;
+      textoElemento.classList.remove("fade-in");
+      void textoElemento.offsetWidth; 
+      textoElemento.textContent = textos[indice];
+      textoElemento.classList.add("fade-in");
+    }, 3000);
+  </script>
+
+</body>
+</html>
+
