@@ -8,6 +8,35 @@ body {
     background-position: center;
     color: #fff;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.linha-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #16020254;
+}
+
+.texto {
+  max-width: 400px;
+}
+
+.video {
+  max-width: 500px;
+}
+
+.video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 
 header {
     background-color: rgba(0, 0, 0, 0.8);
@@ -17,7 +46,11 @@ header {
     font-size: 2.5em;
     font-weight: bold;
 }
-
+h5{
+    color: #69ff99;
+    text-align: center;
+    font-size: 17px;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +75,7 @@ header {
 }
 
 h2 {
-    color: #FF69B4;
+    color: #f72d92;
     text-align: center;
 }
 
